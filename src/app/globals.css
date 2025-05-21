@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: white;
+  overflow-x: hidden !important;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 
+    Use .x-dark, .x-light, .dial-light, or .custom classes 
+    .custom - does not contain any colors, radii or shadow
+*/
+
+/* 1D41B9 */
+/* 699EFF */
+/* CCECFF */
+/* 1C71FF */
+
+.blink.custom {
+  --blink-bg-primary: #1C71FF;
+
+  /* Button customization : */
+  --blink-button: #fff;
+  --blink-text-button: #1C71FF;
+
+  --blink-button-disabled: #fff;
+  --blink-button-hover: #fffffff3;
+  --blink-button-success: #00ae661a;
+  --blink-icon-error: #ff6565;
+  --blink-icon-error-hover: #ff7a7a;
+  --blink-icon-primary: #fff;
+  --blink-icon-primary-hover: #fff;
+  --blink-icon-warning: #ffb545;
+  --blink-icon-warning-hover: #ffc875;
+
+  /* Inputs customization : */
+
+  --blink-input-stroke-disabled: #566470;
+  --blink-input-stroke-error: #ff6565;
+  --blink-input-stroke-hover: #fff;
+  --blink-input-stroke-selected: #fff;
+  --blink-stroke-error: #ff6565;
+
+  /* To disable stroke :*/
+  --blink-stroke-primary: #1C71FF;
+  --blink-stroke-secondary: #fff;
+  --blink-stroke-warning: #ffb545;
+  --blink-text-brand: #35aeff;
+
+  --blink-text-button-disabled: #000;
+  --blink-text-button-success: #12dc88;
+  --blink-text-error: #ff6565;
+  --blink-text-error-hover: #ff7a7a;
+ 
+  --blink-text-link: #fff;
+  --blink-text-link-hover: #fff;
+  --blink-text-primary: #fff;
+  --blink-text-secondary: #fff;
+  --blink-text-success: #12dc88;
+  --blink-text-warning: #ffb545;
+  --blink-text-warning-hover: #ffc875;
+  --blink-transparent-error: #aa00001a;
+  --blink-transparent-grey: #fff1a;
+  --blink-transparent-warning: #a966001a;
+
+  --blink-border-radius-rounded-lg: 0.25rem;
+  --blink-border-radius-rounded-xl: 0.5rem;
+  --blink-border-radius-rounded-2xl: 1.125rem;
+  --blink-border-radius-rounded-button: 624.9375rem;
+  --blink-border-radius-rounded-input : 624.9375rem;
+
+}

@@ -1,0 +1,51 @@
+{
+  "name": "sendarcade",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dialectlabs/blinks": "^0.13.0-beta.1",
+    "@farcaster/frame-core": "^0.0.40",
+    "@farcaster/frame-sdk": "^0.0.48",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-select": "^2.2.2",
+    "@solana/actions": "^1.6.2",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/web3.js": "^1.95.3",
+    "axios": "^1.7.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "local": "link:next/font/local",
+    "lucide-react": "^0.436.0",
+    "next": "14.2.6",
+    "react": "^18",
+    "react-content-loader": "^7.0.2",
+    "react-dom": "^18",
+    "react-lazyload": "^3.2.1",
+    "react-masonry-css": "^1.0.16",
+    "react-tweet-embed": "^2.0.0",
+    "react-twitter-embed": "^4.0.4",
+    "react-twitter-widgets": "^1.11.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-lazyload": "^3.2.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

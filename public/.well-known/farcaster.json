@@ -1,0 +1,16 @@
+{
+  "frame": {
+    "version": "1",
+    "name": "Send Arcade",
+    "iconUrl": "https://sendarcade.fun/favicon.ico",
+    "homeUrl": "https://sendarcade.fun",
+    "imageUrl": "https://sendarcade.fun/banner.png",
+    "buttonTitle": "🎮 Play",
+    "splashImageUrl": "https://sendarcade.fun/favicon.ico",
+    "splashBackgroundColor": "#1C71FF",
+    "requiredChains": ["solana:mainnet"],
+    "requiredCapabilities": [
+      "wallet.getSolanaProvider"
+    ]
+  }
+} 
