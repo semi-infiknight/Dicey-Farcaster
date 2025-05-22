@@ -2,12 +2,12 @@
 
 import { envHeliusRpcUrl } from "@/lib/envConfig";
 import { Action, useAction } from "@dialectlabs/blinks";
-import { useActionSolanaWalletAdapter } from "@dialectlabs/blinks/hooks/solana";
 import "@dialectlabs/blinks/index.css";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useFarcasterSolanaProvider } from "@/providers/FarcasterProvider";
 import { sdk } from "@farcaster/frame-sdk";
+import { createFarcasterAdapter } from "@/lib/farcasterSolanaAdapter";
 
 const DynamicBlink = dynamic(
   () => import("@dialectlabs/blinks").then((mod) => mod.Blink),
@@ -17,35 +17,36 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const BlinkComp = ({ propActionApiUrl }: { propActionApiUrl: string }) => {
   const [action, setAction] = useState<Action | null>(null);
+  const [adapter, setAdapter] = useState<any>(null);
   const farcasterProvider = useFarcasterSolanaProvider();
 
   const actionApiUrl = propActionApiUrl;
   
-  // Use the adapter from useActionSolanaWalletAdapter for now, but we can use the farcasterProvider
-  // to enhance it with Farcaster capabilities
-  const { adapter } = useActionSolanaWalletAdapter(envHeliusRpcUrl as string);
-  
-  // If we have the Farcaster provider, create a new enhanced adapter
+  // Set up the adapter using the Farcaster provider
   useEffect(() => {
-    if (farcasterProvider) {
-      const enhanceAdapter = async () => {
-        try {
-          // Connect the farcaster provider if it's available
-          await (farcasterProvider as any).connect?.();
-          console.log("Connected Farcaster provider for Blink");
-        } catch (error) {
-          console.error("Failed to connect Farcaster provider for Blink:", error);
+    const setupAdapter = async () => {
+      try {
+        if (farcasterProvider) {
+          // Use our custom adapter that wraps the Farcaster provider
+          const farcasterAdapter = await createFarcasterAdapter();
+          setAdapter(farcasterAdapter);
+          console.log("Created Farcaster adapter for Blink");
+        } else {
+          console.log("Farcaster provider not available yet");
         }
-      };
-      
-      enhanceAdapter();
-    }
+      } catch (error) {
+        console.error("Failed to set up Farcaster adapter:", error);
+      }
+    };
+    
+    setupAdapter();
   }, [farcasterProvider]);
 
   // useAction initiates registry, adapter and fetches the action.
   const { action: actionUrl } = useAction({
     url: actionApiUrl,
-    adapter,
+    adapter: adapter,
+    skip: !adapter, // Skip if adapter is not ready
   });
 
   useEffect(() => {
