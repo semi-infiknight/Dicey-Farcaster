@@ -1,0 +1,9 @@
+{
+  "build": {
+    "env": {
+      "ENABLE_VC_BUILD": "1"
+    }
+  },
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm run build"
+} 
