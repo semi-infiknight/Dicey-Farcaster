@@ -68,11 +68,7 @@ const BlinksSection = () => {
           {/* Chain selector removed */}
         </header>
 
-        <p className="text-[56px] sm:text-[64px] md:text-[72px] lg:text-[80px] xl:text-[94px] text-center pt-24 leading-none">
-          Games on Sonic SVM
-        </p>
-
-        <div className={`grid ${games.length === 1 ? 'grid-cols-1 md:pl-56 md:pr-56 lg:pl-72 lg:pr-72 xl:pl-96 xl:pr-96 2xl:pl-144 2xl:pr-144' : games.length === 2 ? 'grid-cols-1 md:grid-cols-2 xl:pl-40 xl:pr-40 2xl:pl-72 2xl:pr-72 gap-4 xl:gap-16' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:pl-20 xl:pr-20 gap-4 xl:gap-12'} w-full max-w-7.5xl p-4 justify-center xl:pt-8 relative z-10 mx-auto`}>
+        <div className={`grid ${games.length === 1 ? 'grid-cols-1 md:pl-56 md:pr-56 lg:pl-72 lg:pr-72 xl:pl-96 xl:pr-96 2xl:pl-144 2xl:pr-144' : games.length === 2 ? 'grid-cols-1 md:grid-cols-2 xl:pl-40 xl:pr-40 2xl:pl-72 2xl:pr-72 gap-4 xl:gap-16' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:pl-20 xl:pr-20 gap-4 xl:gap-12'} w-full max-w-7.5xl p-4 justify-center xl:pt-8 relative z-10 mx-auto mt-20`}>
           {games.map((game, index) => (
             <div key={index}>
               <p className="text-[42px] leading-none text-center mb-8 mt-4">{game.title}</p>
