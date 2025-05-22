@@ -17,7 +17,7 @@ export default function RootLayout({
   // Define the frame metadata
   const frameMetadata = {
     version: "next",
-    imageUrl: "https://dicecast.sendarcade.fun/banner.png",
+    imageUrl: "https://dicecast.sendarcade.fun/og.jpg",
     button: {
       title: "🎮 Play",
       action: {
