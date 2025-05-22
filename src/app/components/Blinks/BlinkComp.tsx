@@ -43,11 +43,11 @@ const BlinkComp = ({ propActionApiUrl }: { propActionApiUrl: string }) => {
   }, [farcasterProvider]);
 
   // useAction initiates registry, adapter and fetches the action.
-  const { action: actionUrl } = useAction({
+  // Only call useAction when adapter is available
+  const { action: actionUrl } = adapter ? useAction({
     url: actionApiUrl,
     adapter: adapter,
-    skip: !adapter, // Skip if adapter is not ready
-  });
+  }) : { action: null };
 
   useEffect(() => {
     if (actionUrl) {
