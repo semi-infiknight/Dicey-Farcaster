@@ -1,21 +1,21 @@
 export const games = [
-  // {
-  //   title: "Snakes & Ladders",
-  //   description:
-  //   `Introducing Snakes and Ladders on Blinks!
+  {
+    title: "Snakes & Ladders",
+    description:
+    `Introducing Snakes and Ladders on Blinks!
 
-  //   → Roll the dice.  
-  //   → 4 pieces/teams to move 🔴 🔵 🟡 🟢 
-  //   → Climb ladders. Dodge snakes. Win prizes.
+    → Roll the dice.  
+    → 4 pieces/teams to move 🔴 🔵 🟡 🟢 
+    → Climb ladders. Dodge snakes. Win prizes.
 
-  //   ––  You play and win as a team [one of the 4 colors]
-  //   ––  Whenever any color piece (or team) wins, the prize pool gets distributed automatically among all the wallet addresses that rolled for that piece
+    ––  You play and win as a team [one of the 4 colors]
+    ––  Whenever any color piece (or team) wins, the prize pool gets distributed automatically among all the wallet addresses that rolled for that piece
 
-  //   –– Your team also gets additional prizes (e.g., BONK) as shown on the board. 
-  //   –– A new game begins as soon as the current one ends.`,
+    –– Your team also gets additional prizes (e.g., BONK) as shown on the board. 
+    –– A new game begins as soon as the current one ends.`,
 
-  //   blinkUrl: "https://snakes.sendarcade.fun/sonic/game"
-  // },
+    blinkUrl: "https://dial.to/?action=solana-action:https://snakes.sendarcade.fun/api/actions/game"
+  }
   // {
   //   title: "Checkmate",
   //   description:
@@ -40,14 +40,14 @@ export const games = [
     
   //   blinkUrl: "https://checkmate.sendarcade.fun/sonic/chess"
   // }
-  {
-    title: "Rock Paper Scissors",
-    description:
-    `Introducing Double or Nothing: Rock Paper Scissors!
+  // {
+  //   title: "Rock Paper Scissors",
+  //   description:
+  //   `Introducing Double or Nothing: Rock Paper Scissors!
     
-    Play rock paper scissors with SOL for a chance to double your bet!`,
+  //   Play rock paper scissors with SOL for a chance to double your bet!`,
 
-    blinkUrl: "https://dial.to/?action=solana-action:https://rps.sendarcade.fun/api/actions/rps",
-    websiteText: "rps.sendarcade.fun"
-  }
+  //   blinkUrl: "https://dial.to/?action=solana-action:https://rps.sendarcade.fun/api/actions/rps",
+  //   websiteText: "rps.sendarcade.fun"
+  // }
 ]
