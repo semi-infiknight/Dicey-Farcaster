@@ -47,7 +47,7 @@ export const games = [
     
     Play rock paper scissors with SOL for a chance to double your bet!`,
 
-    blinkUrl: "https://rps.sendarcade.fun/api/actions/rps",
+    blinkUrl: "solana-action:https://rps.sendarcade.fun/api/actions/rps",
     websiteText: "rps.sendarcade.fun"
   }
 ]
