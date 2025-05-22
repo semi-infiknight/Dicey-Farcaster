@@ -13,10 +13,10 @@ export async function createFarcasterAdapter() {
     }
     
     // Create an adapter that uses the Farcaster provider
-    // Use any type to bypass TypeScript checks for now
-    return {
+    // Create a mutable adapter object
+    const adapter = {
       // We'll have to set publicKey later after connecting
-      publicKey: null,
+      publicKey: null as PublicKey | null,
       
       // Pass transactions through to the provider
       signTransaction: async (transaction: any) => {
@@ -43,7 +43,7 @@ export async function createFarcasterAdapter() {
         const result = await (provider as any).connect();
         // Set publicKey after connecting
         if (result && result.publicKey) {
-          (this as any).publicKey = new PublicKey(result.publicKey);
+          adapter.publicKey = new PublicKey(result.publicKey);
         }
         return result;
       },
@@ -53,6 +53,8 @@ export async function createFarcasterAdapter() {
         console.log("Disconnect not supported in Farcaster");
       }
     };
+    
+    return adapter;
   } catch (error) {
     console.error("Failed to create Farcaster adapter:", error);
     throw error;
