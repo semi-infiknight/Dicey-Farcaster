@@ -42,18 +42,19 @@ const BlinkComp = ({ propActionApiUrl }: { propActionApiUrl: string }) => {
     setupAdapter();
   }, [farcasterProvider]);
 
-  // useAction initiates registry, adapter and fetches the action.
-  // Only call useAction when adapter is available
-  const { action: actionUrl } = adapter ? useAction({
+  // Always call useAction, but pass a dummy adapter if the real one isn't ready
+  // This way we don't violate the Rules of Hooks
+  const dummyAdapter = {}; // Empty adapter that will cause useAction to not do anything
+  const { action: actionUrl } = useAction({
     url: actionApiUrl,
-    adapter: adapter,
-  }) : { action: null };
+    adapter: adapter || dummyAdapter,
+  });
 
   useEffect(() => {
-    if (actionUrl) {
+    if (actionUrl && adapter) { // Only set action if we have both actionUrl and a real adapter
       setAction(actionUrl as Action);
     }
-  }, [actionUrl]);
+  }, [actionUrl, adapter]);
 
   return (
     <>
