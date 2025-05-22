@@ -35,7 +35,7 @@ const TweetWithSkeleton = ({ tweetId }: { tweetId: string }) => {
 
 const LeftBackgroundSVG = () => {
   return (
-    <div className="flex flex-col justify-between items-start w-[240px] h-[500px] sm:w-[300px] sm:h-[600px] md:w-[360px] md:h-[700px] lg:w-[420px] lg:h-[800px] xl:w-[469px] xl:h-[965px]">
+    <div className="flex flex-col justify-between items-start w-[120px] h-[250px] sm:w-[150px] sm:h-[300px] md:w-[180px] md:h-[350px] lg:w-[210px] lg:h-[400px] xl:w-[234px] xl:h-[482px]">
       <div className="w-full">
         <img src="/left_top.png" alt="left top" className="w-full h-full object-contain" />
       </div>
@@ -68,10 +68,10 @@ const BlinksSection = () => {
           {/* Chain selector removed */}
         </header>
 
-        <div className={`grid ${games.length === 1 ? 'grid-cols-1 md:pl-56 md:pr-56 lg:pl-72 lg:pr-72 xl:pl-96 xl:pr-96 2xl:pl-144 2xl:pr-144' : games.length === 2 ? 'grid-cols-1 md:grid-cols-2 xl:pl-40 xl:pr-40 2xl:pl-72 2xl:pr-72 gap-4 xl:gap-16' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:pl-20 xl:pr-20 gap-4 xl:gap-12'} w-full max-w-7.5xl p-4 justify-center xl:pt-8 relative z-10 mx-auto mt-20`}>
+        <div className={`grid ${games.length === 1 ? 'grid-cols-1 md:pl-56 md:pr-56 lg:pl-72 lg:pr-72 xl:pl-96 xl:pr-96 2xl:pl-144 2xl:pr-144' : games.length === 2 ? 'grid-cols-1 md:grid-cols-2 xl:pl-40 xl:pr-40 2xl:pl-72 2xl:pr-72 gap-4 xl:gap-16' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:pl-20 xl:pr-20 gap-4 xl:gap-12'} w-full max-w-7.5xl p-4 justify-center xl:pt-8 relative z-10 mx-auto`}>
           {games.map((game, index) => (
             <div key={index}>
-              <p className="text-[42px] leading-none text-center mb-8 mt-4">{game.title}</p>
+              <p className="text-[42px] leading-none text-center mb-8 mt-4"></p>
               <BlinkComp propActionApiUrl={game.blinkUrl} />
 
               {/* Game Mechanics Text */}
