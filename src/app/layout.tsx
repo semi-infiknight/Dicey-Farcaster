@@ -26,6 +26,7 @@ export default function RootLayout({
         url: "https://dicecast.sendarcade.fun",
         splashImageUrl: "https://dicecast.sendarcade.fun/favicon.ico",
         splashBackgroundColor: "#1C71FF"
+        
       }
     }
   };
