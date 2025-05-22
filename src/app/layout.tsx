@@ -17,14 +17,14 @@ export default function RootLayout({
   // Define the frame metadata
   const frameMetadata = {
     version: "next",
-    imageUrl: "https://sendarcade.fun/banner.png",
+    imageUrl: "https://dicecast.sendarcade.fun/banner.png",
     button: {
       title: "🎮 Play",
       action: {
         type: "launch_frame",
         name: "Send Arcade",
-        url: "https://sendarcade.fun",
-        splashImageUrl: "https://sendarcade.fun/favicon.ico",
+        url: "https://dicecast.sendarcade.fun",
+        splashImageUrl: "https://dicecast.sendarcade.fun/favicon.ico",
         splashBackgroundColor: "#1C71FF"
       }
     }
@@ -37,15 +37,15 @@ export default function RootLayout({
         <meta name="description" content="Gamifying Blinks" />
         <meta property="og:title" content="Send Arcade" />
         <meta property="og:description" content="Gamifying Blinks" />
-        <meta property="og:url" content="https://sendarcade.fun" />
+        <meta property="og:url" content="hhttps://dicecast.sendarcade.fun" />
         <meta property="og:site_name" content="Send Arcade" />
-        <meta property="og:image" content="https://sendarcade.fun/banner.png" />
+        <meta property="og:image" content="https://dicecast.sendarcade.fun/og.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Send Arcade" />
         <meta name="twitter:description" content="Gamifying Blinks" />
         <meta name="twitter:site" content="@send_arcade" />
-        <meta name="twitter:image" content="https://sendarcade.fun/banner.png" />
+        <meta name="twitter:image" content="https://dicecast.sendarcade.fun/og.jpg" />
         <meta name="fc:frame" content={JSON.stringify(frameMetadata)} />
         <link rel="icon" href="/favicon.ico" />
       </head>

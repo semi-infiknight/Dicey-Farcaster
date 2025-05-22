@@ -1,5 +1,5 @@
 export async function GET() {
-  const appUrl = process.env.NEXT_PUBLIC_URL;
+  const appUrl = process.env.NEXT_PUBLIC_URL || "https://dicecast.sendarcade.fun";
 
   const config = {
     accountAssociation: {
@@ -14,7 +14,7 @@ export async function GET() {
       name: "Rock Paper Scissors",
       iconUrl: `${appUrl}/icon.png`,
       homeUrl: appUrl,
-      imageUrl: `${appUrl}/ogimage.jpg`,
+      imageUrl: `${appUrl}/og.jpg`,
       buttonTitle: "Start Battle",
       splashImageUrl: `${appUrl}/splash.png`,
       splashBackgroundColor: "#f7f7f7",
