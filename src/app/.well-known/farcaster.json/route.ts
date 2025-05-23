@@ -2,13 +2,11 @@ export async function GET() {
   const appUrl = process.env.NEXT_PUBLIC_URL || "https://dicecast.sendarcade.fun";
 
   const config = {
-    accountAssociation: {
-      header:
-        "eyJmaWQiOjM2MjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgyY2Q4NWEwOTMyNjFmNTkyNzA4MDRBNkVBNjk3Q2VBNENlQkVjYWZFIn0",
-      payload: "eyJkb21haW4iOiJmcmFtZXMtdjIudmVyY2VsLmFwcCJ9",
-      signature:
-        "MHhiNDIwMzQ1MGZkNzgzYTExZjRiOTllZTFlYjA3NmMwOTdjM2JkOTY1NGM2ODZjYjkyZTAyMzk2Y2Q0YjU2MWY1MjY5NjI5ZGQ5NTliYjU0YzEwOGI4OGVmNjdjMTVlZTdjZDc2YTRiMGU5NzkzNzA3YzkxYzFkOWFjNTg0YmQzNjFi",
-    },
+    "accountAssociation": {
+    "header": "eyJmaWQiOjEwODI0NjksInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhjRTgxMTM3MTg0NTFBZkM0YUVDQThjNTZmNjM0QzI1OThDODY1MzREIn0",
+    "payload": "eyJkb21haW4iOiJkaWNlY2FzdC5zZW5kYXJjYWRlLmZ1biJ9",
+    "signature": "MHhiMTIwMjI2NjhjMzYzOGZiZWE0M2UyNmFmOTEyMTNhOTQ3OGJkMGUxNDcwNjMzZTdkNDFjMjM1NDkzNjQ0YmJjMWYyNGI5YTFjNGIwYzk3Njk4ZGVmNDRkYTE5MTI2ZWNlMjg1YzUwNmE5MGJkMGZmZGVlYWU5ZDQzNjY2ZjU4OTFi"
+  },
     frame: {
       version: "1",
       name: "Snakes and Ladders",
