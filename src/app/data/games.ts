@@ -2,17 +2,13 @@ export const games = [
   {
     title: "Snakes & Ladders",
     description:
-    `Introducing Snakes and Ladders on Blinks!
+    `Introducing Snakes and Ladders on Farcaster!
 
     → Roll the dice.  
     → 4 pieces/teams to move 🔴 🔵 🟡 🟢 
-    → Climb ladders. Dodge snakes. Win prizes.
-
-    ––  You play and win as a team [one of the 4 colors]
-    ––  Whenever any color piece (or team) wins, the prize pool gets distributed automatically among all the wallet addresses that rolled for that piece
-
-    –– Your team also gets additional prizes (e.g., BONK) as shown on the board. 
-    –– A new game begins as soon as the current one ends.`,
+    → Climb ladders. Dodge snakes.  
+    → When you land on a square with a memecoin on it (e.g., BONK), you get a reward in that memecoin.
+    → Whenever any piece reaches the last square, they get a guaranteed $SEND reward.`,
 
     blinkUrl: "https://dial.to/?action=solana-action:https://snakes.sendarcade.fun/api/actions/game"
   }
