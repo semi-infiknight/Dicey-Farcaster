@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import BottomBG from "@/assets/svgs/bgs/BottomBG.svg";
-import TopBG from "@/assets/svgs/bgs/TopBG.svg";
+import BottomBG from "../assets/svgs/bgs/BottomBG.svg";
+import TopBG from "../assets/svgs/bgs/TopBG.svg";
 import Image from "next/image";
 import { games } from "../data/games";
 import { tweets } from "../data/tweets";
@@ -13,7 +13,7 @@ import {
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import closeIcon from "@/assets/svgs/buttons/close.svg";
+import closeIcon from "../assets/svgs/buttons/close.svg";
 import { CardBg } from "@/assets/bgs/CardBg";
 
 const TweetWithSkeleton = ({ tweetId }: { tweetId: string }) => {
@@ -75,7 +75,7 @@ const BlinksSection = () => {
               <BlinkComp propActionApiUrl={game.blinkUrl} />
 
               {/* Game Mechanics Text */}
-              <div className="hidden md:block">
+              <div>
                 <Dialog>  
                   <DialogTrigger>
                     <p
